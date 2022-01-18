@@ -5,16 +5,18 @@ ZSH_THEME="robbyrussell"
 plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
+source <(kubectl completion zsh)
 
 alias vim=nvim.appimage
 alias sleeplock="i3lock && echo mem > /sys/power/state"
+alias k=kubectl
 
 znap source marlonrichert/zsh-autocomplete
 znap source zsh-users/zsh-autosuggestions
 
 export GOBIN=$HOME/go/bin
 export PATH=$PATH:$GOBIN
-export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/usr/local/go/bin:/$HOME/bin
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

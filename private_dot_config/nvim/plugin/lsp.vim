@@ -16,6 +16,8 @@ nnoremap <leader>vsd :lua vim.lsp.diagnostic.show_line_diagnostics(); vim.lsp.ut
 nnoremap <leader>vn :lua vim.lsp.diagnostic.goto_next()<CR>
 nnoremap <leader>vll :call LspLocationList()<CR>
 
+nnoremap <leader>pp :Neoformat<CR>
+
 augroup SMILEYHOON
     autocmd!
     autocmd! BufWrite,BufEnter,InsertLeave * :call LspLocationList()

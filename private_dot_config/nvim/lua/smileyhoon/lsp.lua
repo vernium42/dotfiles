@@ -141,3 +141,25 @@ tabnine:setup({
 
 require("lspconfig").pylsp.setup(config())
 
+require('lspconfig').tailwindcss.setup(config({
+    filetypes = { "typescript", "html", "typescriptreact", "typescript.tsx" };
+    settings = {
+      tailwindCSS = {
+        classAttributes = { "class", "className", "classList", "ngClass" },
+        lint = {
+          cssConflict = "warning",
+          invalidApply = "error",
+          invalidConfigPath = "error",
+          invalidScreen = "error",
+          invalidTailwindDirective = "error",
+          invalidVariant = "error",
+          recommendedVariantOrder = "warning"
+        },
+        validate = true
+      }
+    };
+}))
+
+require('lspconfig').tsserver.setup(config())
+
+require('lspconfig').yamlls.setup(config())
