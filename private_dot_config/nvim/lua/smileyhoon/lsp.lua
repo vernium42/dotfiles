@@ -163,3 +163,5 @@ require('lspconfig').tailwindcss.setup(config({
 require('lspconfig').tsserver.setup(config())
 
 require('lspconfig').yamlls.setup(config())
+
+require('lspconfig').sqlls.setup(config())
